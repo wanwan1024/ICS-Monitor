@@ -1,0 +1,101 @@
+<!-- demo.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packet Sniffer</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <!-- 引入 Plotly.js -->
+    <!-- <script offline-pcap="{{ url_for('static', filename='plotly-latest.min.js') }}"></script> -->
+
+    <!-- 开发测试用 -->
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+
+<body>
+
+    <!-- 页眉, 也算是标题了 -->
+    <div class="page-header">Online Monitor</div>
+
+    <!-- 接下来是一个介绍界面 -->
+    <div class="introduction">
+        该界面是用于在线监测流量,并进行流量分析和示警等.
+    </div>
+
+    <a href="/offline_analyzer">
+        <button class="to_another_page" onclick="to_offline_html()">进入离线版本</button>
+    </a>
+
+    <!-- 两个按钮, 控制开始结束 -->
+    <div class="two-button">
+        <button class="start-button" onclick="sniff_start()">Start</button>
+        <button class="end-button" onclick="sniff_end()">End</button>
+    </div>
+
+
+    <div id="OnlineTrafficChart"></div>
+
+    <button class="save_pcap" onclick="savePackets()">保存为本地pcap文件</button>
+
+
+    <div class="warningInfo">
+        <h1 style="text-align: center;">异常信息示警</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>时间</th>
+                    <th>可疑地址</th>
+                    <th>异常信息</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 接着是通信质量分析 -->
+    <div class="NetworkQuality">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- 四个饼状图 -->
+    <div class="Pchart1">
+        <div id="LenPchart"></div>
+        <div id="NLPchart"></div>
+    </div>
+
+    <div class="Pchart2">
+        <div id="TLPchart"></div>
+        <div id="ALPchart"></div>
+    </div>
+
+    <!-- 这两个是条形图的 -->
+    <div id="ProtocolSum"></div>
+    <div id="IPSumerize"></div>
+
+
+    <!-- <script offline-pcap="{{ url_for('static', filename='script.js') }}"></script> -->
+    <script src="../static/chart_draw.js"></script>
+    <script src="../static/online_monitor.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+/* 此处是对应index.html和offline-analyzer.html的整体页面的CSS文件 */
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}	
+
+/* 先是index.html的 */
+
+/* 前面两个是也没,是两个html文件共有的 */
+.page-header {
+	height: 80px;
+	background-color: rgb(91, 86, 86);
+
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 80px;
+	text-align: center;
+	color: rgb(179, 131, 69);
+}
+
+.to_another_page{
+	background-color: #666a66;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	padding: 15px 32px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.to_another_page:hover {
+	background-color: #45a049;
+}
+
+.warningInfo {
+	display: none;
+	margin: 50px 0 0 0;
+}
+
+.warningInfo table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+.warningInfo  th,
+td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.warningInfo  th {
+	background-color: #f2f2f2;
+	color: #333;
+}
+
+.warningInfo  tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.warningInfo  tr:hover {
+	background-color: #f1f1f1;
+}
+
+
+
+.two-button {
+	display: flex;
+	justify-content: space-evenly;
+
+	margin: 40px 0 40px 40px;
+	height: 60px;
+	/* background-color: rgb(139, 131, 131); */
+}
+
+.two-button button{
+	display: inline-block;
+	height: 60px;
+	width: 100px;
+	background-color: rgb(231, 238, 238);
+
+	font-size: 25px;
+	font-weight: 700;
+	border-radius: 20px;
+}
+
+.two-button button:hover{
+	background-color: #474141;
+}
+
+.two-button button:active {
+	/* 点击时的背景颜色 */
+	background-color: #97a5b3; 
+	/* 添加点击时的阴影效果 */
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);  
+}
+
+/* 保存按钮 */
+.save_pcap {
+	display: none;
+	background-color: #5e5e5e; /* 绿色背景 */
+	border: none; /* 无边框 */
+	color: white; /* 白色文字 */
+	padding: 10px 20px; /* 设置内边距 */
+	text-align: center;
+	text-decoration: none;
+	/* display: inline-block; */
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 8px; /* 圆角边框 */
+	float: right; /* 浮动到右侧 */
+}
+
+/* 设置按钮悬停时的样式 */
+.save_pcap:hover {
+	background-color: #45a049; /* 深绿色背景 */
+	}
+
+/* 分析结果 */
+.NetworkQuality {
+	/* 修改为block就显示了 */
+	/* display: none;		 */
+	/* background-color: aqua; */
+	margin: 5px 50px;
+}
+
+.NetworkQuality li{
+	display: flex;
+	font-size: 15px;
+	text-indent: 20px;
+}
+
+/* 四个饼状图 */
+.Pchart1 {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.Pchart2 {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+/* 后面写offline-analyzer.html的 */
+.introduction {
+	height: 40px;
+	/* width: 1%; */
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	background-color: rgb(115, 104, 104);
+}
+
+.file_choose_div{
+	display: flex;
+	height: 40px;
+	margin: 20px 30px;
+	border: 1px solid #ccc; 
+	box-shadow: 2px 2px 5px #ccc; 
+	border-radius: 8px;
+	line-height: 40px;
+	
+}
+
+.filename_view {
+	flex: 80%;
+}
+
+
+
+.file_choose {
+	height: 38px;
+	flex: 10%;
+	background-color: rgb(53, 106, 181);
+	font-size: 18px;
+	text-align: center;
+	color: aliceblue;
+	border: 1px solid #ccc;
+	border-right: 1px solid black;
+}
+
+.file_choose:hover{
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+	cursor: pointer;
+}
+
+.file_delete {
+	height: 38px;
+	flex: 10%;
+	background-color: #45a049;
+	font-size: 18px;
+	text-align: center;
+	color: aliceblue;
+	border: 1px solid #ccc;
+	border-radius: 0 8px 8px 0;
+}
+
+.file_delete:hover{
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+#uploadfilename {
+	height: 80px;
+	width: 150px;
+	background-color: rgb(46, 152, 219);
+	margin: 10px 0 40px 40px;
+	border-radius: 20px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 28px;
+	color: aliceblue;
+}
+
+#uploadfilename:hover{
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	color: #97a5b3;
+}

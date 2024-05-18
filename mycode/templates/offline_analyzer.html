@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../static/style.css">
+	<script src="../static/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+	<!-- 页眉, 也算是标题了 -->
+	<div class="page-header">Offline Analyzer</div>
+
+
+	<!-- 接下来是一个介绍界面 -->
+	<div class="introduction">
+		该界面是用于离线分析pcap包,包括时间-流量图等等.
+	</div>
+
+	<a href="/">
+		<button class="to_another_page">进入在线版本</button>
+	</a>
+
+	<div class="file_choose_div">
+		<div class="filename_view" id="fileDisplay">
+
+		</div>
+		<div class="file_choose" id="fileSelect">
+			选择文件
+		</div>
+		<div class="file_delete">
+			删除
+		</div>
+	</div>
+	<input type="file" id="fileInput" style="display: none;">
+
+	<div id="uploadfilename">
+		上传分析
+	</div>
+
+	<div id="offline_ttp"></div>
+
+
+	<!-- 通信质量分析 -->
+	<div class="NetworkQuality">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<div class="warningInfo">
+		<h1 style="text-align: center;">异常信息示警</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>时间</th>
+					<th>可疑地址</th>
+					<th>异常信息</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- 四个饼状图 -->
+	<div class="Pchart1">
+		<div id="LenPchart"></div>
+		<div id="NLPchart"></div>
+	</div>
+
+	<div class="Pchart2">
+		<div id="TLPchart"></div>
+		<div id="ALPchart"></div>
+	</div>
+
+	<!-- 这两个是条形图的 -->
+	<div id="ProtocolSum"></div>
+	<div id="IPSumerize"></div>
+
+	<script src="../static/chart_draw.js"></script>
+	<script src="../static/offline.js"></script>
+
+</body>
+
+</html>

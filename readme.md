@@ -21,23 +21,23 @@
 
 End同时会出现离线分析的结果，包括：
 
-![](.\src\commuication-quality.png)
+![](./src/commuication-quality.png)
 
 <center>图-通信质量分析</center>
 
-![image-20240518145643727](.\src\protocol-proportion.png)
+![image-20240518145643727](./src/protocol-proportion.png)
 
 <center>
     图-四层协议占比
 </center>
 
-![image-20240518145809400](.\src\all-protocols.png)
+![image-20240518145809400](./src/all-protocols.png)
 
 <center>
     图-所有协议统计
 </center>
 
-![image-20240518145906998](.\src\ipaddr-count.png)
+![image-20240518145906998](./src/ipaddr-count.png)
 
 <center>
     图-ip地址统计
@@ -45,7 +45,7 @@ End同时会出现离线分析的结果，包括：
 
 至于离线分析部分，程序执行开始可以选择进入离线分析，如下图：
 
-![image-20240518150144198](.\src\offline-analysis.png)
+![image-20240518150144198](./src/offline-analysis.png)
 
 <center>
     图-离线分析选择界面
@@ -57,7 +57,7 @@ End同时会出现离线分析的结果，包括：
 
 在线监听过程中可以实现对部分DDos攻击的预警，模拟攻击的代码在mycode中的attack目录下，实现了三种DDos攻击（小范围模拟），预警效果如下：
 
-![image-20240518151234199](.\src\attack-detect.png)
+![image-20240518151234199](./src/attack-detect.png)
 
 <center>
     图-攻击示警

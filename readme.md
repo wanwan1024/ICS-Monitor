@@ -71,16 +71,6 @@ End同时会出现离线分析的结果，包括：
 
 ## 3.目录说明
 
-1.attack目录是放置测试攻击代码的目录
+1.mycode目录为项目所在，具体详情见mycode目录下的readme文件
 
-2.pcap目录是在线报文为本地pcap目录的位置
-
-3.offline-pcap目录是测试本地分析时文件默认放置的位
-
-4.static目录放置css和js文件
-
-5.templates目录放置两个静态HTML文件
-
-6.src目录是readme的图片保存处
-
-7.主目录为后端代码所在,程序入口在app.py
+2.src目录是readme.md的图片保存处
